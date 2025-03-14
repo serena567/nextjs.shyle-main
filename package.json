@@ -1,0 +1,26 @@
+{
+    "name": "nextjs.shyle-main",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    "start": "npm-run-all -p start:frontend start:backend",
+    "start:frontend": "cross-env port=5000 npm --prefix client run dev",
+    "start:admin": "npm --prefix admin start",
+    "start:backend": "npm --prefix server start",
+    "postinstall": "npm i --prefix client && npm i --prefix admin && npm --prefix server"
+    },
+    "devDependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "cross-env": "7.0.3",
+    "npm-run-all": "^4.1.5"
+    },
+    "repository": {
+    "url": "https://github.com/serena567/nextjs.shyle.git"
+    },
+    "license": "ISC",
+    "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "qs": "6.14.0"
+    }
+}
